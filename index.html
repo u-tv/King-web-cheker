@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>👑 King Website Checker – Premium SEO, Speed & Security Analyzer</title>
-  <meta name="description" content="King Website Checker – Analyze any website's SEO, speed, security, accessibility, structured data, and technical health with premium reporting." />
-  <meta name="keywords" content="website checker, SEO analyzer, speed test, SSL checker, WHOIS lookup, domain health, website security, performance test, free website analysis, website audit, site checker, technical seo, on page seo, content analysis, structured data, json ld, accessibility audit" />
+  <meta name="description" content="King Website Checker – Analyze any website's SEO, speed, security, accessibility, structured data, content, links, and technical health in one premium report." />
+  <meta name="keywords" content="website checker, SEO analyzer, speed test, SSL checker, WHOIS lookup, domain health, website security, performance test, website analysis, site audit, technical seo, on page seo, structured data, json ld, accessibility audit, link checker, meta tag analyzer, page speed insights" />
   <meta name="theme-color" content="#0a0a0f" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -14,7 +14,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
 
   <meta property="og:title" content="👑 King Website Checker – Premium Analyzer" />
-  <meta property="og:description" content="Check SEO, speed, accessibility, security, schema, and technical health for any website." />
+  <meta property="og:description" content="Check SEO, speed, security, accessibility, schema, links, and technical health for any website." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://king-website-checker.pages.dev/" />
   <meta property="og:image" content="https://king-website-checker.pages.dev/og-image.jpg" />
@@ -22,7 +22,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="👑 King Website Checker – Premium Analyzer" />
-  <meta name="twitter:description" content="Audit SEO, speed, security, schema, and accessibility in one place." />
+  <meta name="twitter:description" content="Audit SEO, speed, security, accessibility, schema, links, and more in one place." />
   <meta name="twitter:image" content="https://king-website-checker.pages.dev/og-image.jpg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,30 +33,14 @@
     *{margin:0;padding:0;box-sizing:border-box}
     :root{
       --bg-primary:#0a0a0f;--bg-secondary:#12121f;--bg-card:rgba(20,22,35,0.85);--bg-glass:rgba(15,16,28,0.75);
-      --gold:#FFD700;--gold-light:#FFED4A;--gold-glow:rgba(255,215,0,0.3);--cyan:#00F2FE;--violet:#7F00FF;
-      --pink:#FF2D78;--green:#00E676;--orange:#FF6B00;--red:#FF1744;--white:#FFFFFF;--gray:#b0b8c8;
-      --muted:#6b7280;--border:rgba(255,215,0,0.15);--border2:rgba(255,215,0,0.3);
-      --shadow:0 0 30px rgba(255,215,0,0.15),0 0 60px rgba(127,0,255,0.08);
-      --radius:16px;--radius-full:9999px;--font-primary:'Inter',sans-serif;--font-heading:'Orbitron','Poppins',sans-serif;
-      --text:#fff;
+      --gold:#FFD700;--gold-light:#FFED4A;--cyan:#00F2FE;--violet:#7F00FF;--pink:#FF2D78;--green:#00E676;--orange:#FF6B00;--red:#FF1744;
+      --white:#FFFFFF;--gray:#b0b8c8;--muted:#6b7280;--border:rgba(255,215,0,0.15);--border2:rgba(255,215,0,0.3);
+      --shadow:0 0 30px rgba(255,215,0,0.15),0 0 60px rgba(127,0,255,0.08);--radius:16px;--radius-full:9999px;
+      --font-primary:'Inter',sans-serif;--font-heading:'Orbitron','Poppins',sans-serif;
     }
     html{scroll-behavior:smooth;font-size:16px}
-    body{
-      font-family:var(--font-primary);
-      background:var(--bg-primary);
-      color:var(--white);
-      min-height:100vh;
-      overflow-x:hidden;
-      -webkit-font-smoothing:antialiased;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(255,215,0,0.12), transparent 20%),
-        radial-gradient(circle at 90% 10%, rgba(127,0,255,0.18), transparent 22%),
-        radial-gradient(circle at 30% 80%, rgba(0,242,254,0.12), transparent 24%),
-        linear-gradient(180deg,#070814 0%,#090b18 100%);
-    }
-    ::-webkit-scrollbar{width:6px;height:6px}
-    ::-webkit-scrollbar-track{background:var(--bg-secondary)}
-    ::-webkit-scrollbar-thumb{background:linear-gradient(135deg,var(--gold),var(--violet));border-radius:3px}
+    body{font-family:var(--font-primary);background:var(--bg-primary);color:var(--white);min-height:100vh;overflow-x:hidden;-webkit-font-smoothing:antialiased;background:radial-gradient(circle at 10% 20%, rgba(255,215,0,0.12), transparent 20%),radial-gradient(circle at 90% 10%, rgba(127,0,255,0.18), transparent 22%),radial-gradient(circle at 30% 80%, rgba(0,242,254,0.12), transparent 24%),linear-gradient(180deg,#070814 0%,#090b18 100%)}
+    ::-webkit-scrollbar{width:6px;height:6px}::-webkit-scrollbar-track{background:var(--bg-secondary)}::-webkit-scrollbar-thumb{background:linear-gradient(135deg,var(--gold),var(--violet));border-radius:3px}
     .container{max-width:1600px;margin:0 auto;padding:22px;position:relative;z-index:1}
     header{padding:20px 0;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);flex-wrap:wrap;gap:16px}
     .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
@@ -73,7 +57,7 @@
     .hero h1{font-family:var(--font-heading);font-size:clamp(2.2rem,5vw,4rem);font-weight:900;line-height:1.1;margin-bottom:16px}
     .hero h1 .highlight{background:linear-gradient(135deg,var(--gold),var(--gold-light),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:inline-block}
     .hero h1 .crown-icon{display:inline-block;animation:crownSpin 10s linear infinite}
-    .hero p{font-size:1.05rem;color:var(--gray);max-width:800px;margin:0 auto 28px;line-height:1.8}
+    .hero p{font-size:1.05rem;color:var(--gray);max-width:900px;margin:0 auto 28px;line-height:1.8}
     .search-box{max-width:760px;margin:0 auto;background:var(--bg-card);border:2px solid var(--border);border-radius:var(--radius-full);padding:6px;display:flex;gap:6px;transition:all 0.4s ease;backdrop-filter:blur(10px);position:relative}
     .search-box:focus-within{border-color:var(--gold);box-shadow:0 0 0 4px rgba(255,215,0,0.1),var(--shadow);transform:scale(1.01)}
     .search-box input{flex:1;background:transparent;border:none;padding:16px 24px;color:var(--white);font-size:1rem;outline:none;font-family:var(--font-primary);min-width:0}
@@ -86,384 +70,171 @@
     .stat-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:var(--shadow)}
     .stat-card .number{font-family:var(--font-heading);font-size:2rem;font-weight:800;background:linear-gradient(135deg,var(--gold),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
     .stat-card .label{font-size:0.8rem;color:var(--muted);margin-top:4px}
-    .results{display:none;margin:40px 0;animation:fadeUp 0.6s ease forwards}
-    .results.active{display:block}
-    .result-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-    .result-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;transition:all 0.3s ease;backdrop-filter:blur(10px)}
-    .result-card:hover{border-color:var(--gold);transform:translateY(-4px);box-shadow:var(--shadow)}
-    .result-card .card-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-    .result-card .card-header .icon{font-size:28px}
-    .result-card .card-header .badge{padding:4px 12px;border-radius:var(--radius-full);font-size:0.7rem;font-weight:700;text-transform:uppercase}
-    .badge.good{background:rgba(0,230,118,0.2);color:var(--green)}
-    .badge.medium{background:rgba(255,215,0,0.2);color:var(--gold)}
-    .badge.bad{background:rgba(255,23,68,0.2);color:var(--red)}
-    .result-card h3{font-size:1rem;font-weight:600;margin-bottom:8px;color:var(--white)}
-    .result-card .value{font-size:1.8rem;font-weight:800;font-family:var(--font-heading);color:var(--gold)}
-    .result-card .sub{font-size:0.85rem;color:var(--muted);margin-top:4px}
-    .result-card .progress-bar{width:100%;height:6px;background:rgba(255,255,255,0.05);border-radius:3px;margin-top:12px;overflow:hidden}
-    .result-card .progress-bar .fill{height:100%;border-radius:3px;transition:width 1s ease;background:linear-gradient(90deg,var(--gold),var(--violet));width:0%}
-    .url-display{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:16px 24px;margin-bottom:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;word-break:break-all}
-    .url-display .label{color:var(--muted);font-size:0.8rem;font-weight:500}
-    .url-display .url{font-family:var(--font-heading);font-size:0.95rem;color:var(--gold);flex:1}
-    .url-display .status{padding:4px 16px;border-radius:var(--radius-full);font-size:0.75rem;font-weight:700;text-transform:uppercase}
-    .status.online{background:rgba(0,230,118,0.2);color:var(--green)}
-    .status.offline{background:rgba(255,23,68,0.2);color:var(--red)}
+    .pwa-banner{display:none;background:var(--bg-card);border:1px solid var(--gold);border-radius:var(--radius);padding:16px 24px;margin:20px 0;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;animation:fadeUp 0.6s ease}.pwa-banner.active{display:flex}.pwa-banner .message{display:flex;align-items:center;gap:12px;color:var(--gray);font-size:0.9rem}.pwa-banner .message .icon{font-size:28px}.pwa-banner .btn-install{padding:10px 24px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border:none;border-radius:var(--radius-full);color:var(--bg-primary);font-weight:700;font-size:0.85rem;cursor:pointer;transition:all 0.3s ease}.pwa-banner .btn-install:hover{transform:scale(1.05)}
+    .section-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:18px}.panel{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
+    .table-wrap{margin-top:14px;overflow:auto;border-radius:18px;border:1px solid var(--line)}table{width:100%;border-collapse:collapse;min-width:920px;background:rgba(255,255,255,.02)}th,td{padding:13px 12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;font-size:13px;vertical-align:top}th{position:sticky;top:0;background:#0f152b;color:#dce2ff;z-index:1}
+    .score{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;font-weight:900}.good{background:rgba(57,217,138,.14);color:var(--green)}.warn{background:rgba(255,184,77,.14);color:var(--gold)}.bad{background:rgba(255,107,107,.14);color:var(--red)}
+    .list{display:grid;gap:10px;margin-top:10px}.item{padding:14px 15px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}.item h3{margin:0 0 6px;font-size:14px}.item p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
+    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
     .ad-container{margin:30px 0;padding:16px;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);text-align:center;min-height:90px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
     .ad-container .ad-label{position:absolute;top:4px;right:8px;font-size:0.55rem;color:var(--muted);opacity:0.3;letter-spacing:1px}
-    footer{padding:40px 0 20px;border-top:1px solid var(--border);margin-top:40px;text-align:center}
-    footer .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}
-    footer .footer-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.3s ease}
-    footer .footer-links a:hover{color:var(--gold)}
-    footer p{color:var(--muted);font-size:0.8rem}
-    footer .brand{font-family:var(--font-heading);color:var(--gold);font-weight:600}
-    .loading{display:none;text-align:center;padding:40px 0}
-    .loading.active{display:block}
-    .spinner{width:60px;height:60px;margin:0 auto 16px;border:3px solid var(--border);border-top-color:var(--gold);border-radius:50%;animation:spin 0.8s linear infinite}
-    .error{display:none;text-align:center;padding:40px 20px;background:rgba(255,23,68,0.05);border:1px solid rgba(255,23,68,0.2);border-radius:var(--radius)}
-    .error.active{display:block}
-    .error .icon{font-size:48px;margin-bottom:12px}
-    .error h3{color:var(--red);margin-bottom:8px}
-    .error p{color:var(--muted)}
-    .btn-3d{
-      position:relative;display:inline-block;padding:14px 28px;background:linear-gradient(135deg,var(--gold),var(--gold-light));
-      border:none;border-radius:var(--radius-full);color:var(--bg-primary);font-weight:700;font-size:1rem;cursor:pointer;
-      transition:all 0.15s ease;transform:perspective(800px) rotateX(0deg) translateZ(0);
-      box-shadow:0 6px 0 #b8960f,0 8px 20px rgba(255,215,0,0.2);font-family:var(--font-primary);text-decoration:none
-    }
-    .btn-3d:hover{transform:perspective(800px) rotateX(2deg) translateY(-3px);box-shadow:0 8px 0 #b8960f,0 12px 40px rgba(255,215,0,0.3)}
-    .btn-3d:active{transform:perspective(800px) rotateX(0deg) translateY(4px);box-shadow:0 2px 0 #b8960f,0 8px 20px rgba(255,215,0,0.1)}
-    .btn-3d-secondary{background:linear-gradient(135deg,var(--violet),var(--cyan));box-shadow:0 6px 0 #5a00b8,0 8px 20px rgba(127,0,255,0.2)}
-    .btn-3d-secondary:hover{box-shadow:0 8px 0 #5a00b8,0 12px 40px rgba(127,0,255,0.3)}
-    .adsterra-wrapper{margin:20px 0;padding:12px;border:1px dashed rgba(255,255,255,.12);min-height:80px;display:flex;align-items:center;justify-content:center;position:relative;border-radius:16px;background:rgba(255,255,255,.03)}
-    .adsterra-wrapper .ad-label{position:absolute;top:4px;right:10px;font-size:0.5rem;color:var(--muted);opacity:0.2;letter-spacing:1px;text-transform:uppercase}
-    .pwa-banner{display:none;background:var(--bg-card);border:1px solid var(--gold);border-radius:var(--radius);padding:16px 24px;margin:20px 0;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;animation:fadeUp 0.6s ease}
-    .pwa-banner.active{display:flex}
-    .pwa-banner .message{display:flex;align-items:center;gap:12px;color:var(--gray);font-size:0.9rem}
-    .pwa-banner .message .icon{font-size:28px}
-    .pwa-banner .btn-install{padding:10px 24px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border:none;border-radius:var(--radius-full);color:var(--bg-primary);font-weight:700;font-size:0.85rem;cursor:pointer;transition:all 0.3s ease}
-    .pwa-banner .btn-install:hover{transform:scale(1.05)}
-    .section-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:18px}
-    .panel{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius);padding:18px}
-    .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-    .kpi{padding:16px;border-radius:18px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
-    .kpi .v{font-size:26px;font-weight:950}
-    .kpi .l{font-size:12px;color:var(--muted);margin-top:4px}
-    .table-wrap{margin-top:14px;overflow:auto;border-radius:18px;border:1px solid var(--line)}
-    table{width:100%;border-collapse:collapse;min-width:920px;background:rgba(255,255,255,.02)}
-    th,td{padding:13px 12px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;font-size:13px;vertical-align:top}
-    th{position:sticky;top:0;background:#0f152b;color:#dce2ff;z-index:1}
-    tr:hover td{background:rgba(255,255,255,.03)}
-    .score{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;font-weight:900}
-    .good{background:rgba(57,217,138,.14);color:var(--green)}
-    .warn{background:rgba(255,184,77,.14);color:var(--gold)}
-    .bad{background:rgba(255,107,107,.14);color:var(--red)}
-    .list{display:grid;gap:10px;margin-top:10px}
-    .item{padding:14px 15px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid var(--line)}
-    .item h3{margin:0 0 6px;font-size:14px}
-    .item p{margin:0;color:var(--muted);font-size:13px;line-height:1.6}
-    .two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .spark{height:120px;border-radius:18px;background:linear-gradient(135deg, rgba(124,92,255,.16), rgba(20,184,166,.10)), repeating-linear-gradient(90deg, rgba(255,255,255,.06) 0 1px, transparent 1px 18px), repeating-linear-gradient(180deg, rgba(255,255,255,.06) 0 1px, transparent 1px 18px);border:1px solid var(--line);position:relative;overflow:hidden;margin-top:14px}
-    .spark::after{content:"";position:absolute;inset:auto 0 0 0;height:55%;background:linear-gradient(180deg, transparent 0%, rgba(124,92,255,.24) 80%, rgba(124,92,255,.45) 100%);clip-path:polygon(0 60%, 12% 48%, 22% 52%, 34% 28%, 45% 36%, 56% 18%, 68% 40%, 79% 25%, 90% 33%, 100% 14%, 100% 100%, 0 100%)}
-    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
-    @keyframes pulseGold{0%,100%{box-shadow:0 0 20px rgba(255,215,0,0.2)}50%{box-shadow:0 0 40px rgba(255,215,0,0.5),0 0 80px rgba(127,0,255,0.15)}}
-    @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-    @keyframes glowPulse{0%,100%{opacity:0.3}50%{opacity:0.8}}
-    @keyframes crownSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
-    @keyframes spin{to{transform:rotate(360deg)}}
-    @media(max-width:1100px){
-      .section-grid,.hero{grid-template-columns:1fr}
-      .features,.kpis,.two{grid-template-columns:1fr 1fr}
-      h1{font-size:36px}
-    }
-    @media(max-width:700px){
-      .container{padding:14px}
-      h1{font-size:30px}
-      .features,.kpis,.two{grid-template-columns:1fr}
-      .main,.side,.panel{padding:16px}
-      .search-box{border-radius:18px;flex-direction:column}
-      .search-box input,.search-box button{width:100%}
-    }
+    footer{padding:40px 0 20px;border-top:1px solid var(--border);margin-top:40px;text-align:center}footer .footer-links{display:flex;justify-content:center;gap:24px;flex-wrap:wrap;margin-bottom:16px}footer .footer-links a{color:var(--muted);text-decoration:none;font-size:0.85rem;transition:color 0.3s ease}footer .footer-links a:hover{color:var(--gold)}footer p{color:var(--muted);font-size:0.8rem}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}@keyframes pulseGold{0%,100%{box-shadow:0 0 20px rgba(255,215,0,0.2)}50%{box-shadow:0 0 40px rgba(255,215,0,0.5),0 0 80px rgba(127,0,255,0.15)}}@keyframes glowPulse{0%,100%{opacity:0.3}50%{opacity:0.8}}@keyframes crownSpin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+    @media(max-width:1100px){.section-grid,.hero{grid-template-columns:1fr}.two{grid-template-columns:1fr 1fr}h1{font-size:36px}}
+    @media(max-width:700px){.container{padding:14px}h1{font-size:30px}.two{grid-template-columns:1fr}.panel{padding:16px}.search-box{border-radius:18px;flex-direction:column}.search-box input,.search-box button{width:100%}}
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "name":"King Website Checker",
-    "url":"https://king-website-checker.pages.dev/"
-  }
-  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"King Website Checker","url":"https://king-website-checker.pages.dev/"}</script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a class="logo" href="#">
-        <div class="logo-icon"><span class="crown">👑</span></div>
-        <div>
-          <div class="logo-text">King Website Checker</div>
-          <span class="logo-sub">SEO • SPEED • SECURITY • PREMIUM</span>
-        </div>
-      </a>
-      <div class="header-actions">
-        <a class="header-btn" href="#" onclick="loadSample();return false;">Load Sample</a>
-        <a class="header-btn" href="#" onclick="downloadReport();return false;">Download JSON</a>
-      </div>
-    </header>
+<div class="container">
+<header>
+  <a class="logo" href="#"><div class="logo-icon"><span class="crown">👑</span></div><div><div class="logo-text">King Website Checker</div><span class="logo-sub">SEO • SPEED • SECURITY • PREMIUM</span></div></a>
+  <div class="header-actions"><a class="header-btn" href="#" onclick="loadSample();return false;">Load Sample</a><a class="header-btn" href="#" onclick="downloadReport();return false;">Download JSON</a></div>
+</header>
+<section class="hero">
+  <div class="hero-badge"><span>●</span> Premium URL Audit Suite</div>
+  <h1><span class="crown-icon">👑</span> <span class="highlight">Dynamic SEO-friendly</span> website audit.</h1>
+  <p>Live fetch-based inspection: title, description, canonical, robots, viewport, lang, H1/H2, images, alt text, links, scripts, forms, inputs, buttons, schema, security signals, keyword sync, and fix plan. [web:11][web:3][web:23]</p>
+  <div class="search-box"><input id="url" type="url" placeholder="https://example.com" value="https://example.com" /><button onclick="runAudit()">Run Full Audit</button></div>
+</section>
+<div class="stats-row">
+  <div class="stat-card"><div class="number" id="overall">0</div><div class="label">Overall</div></div>
+  <div class="stat-card"><div class="number" id="seoScore">0</div><div class="label">SEO</div></div>
+  <div class="stat-card"><div class="number" id="perfScore">0</div><div class="label">Performance</div></div>
+  <div class="stat-card"><div class="number" id="a11yScore">0</div><div class="label">Accessibility</div></div>
+  <div class="stat-card"><div class="number" id="secScore">0</div><div class="label">Security</div></div>
+</div>
+<div class="pwa-banner" id="pwaBanner"><div class="message"><div class="icon">📱</div><div>Install this tool as a PWA for faster access and a native feel.</div></div><button class="btn-install" onclick="installPWA()">Install</button></div>
+<div class="ad-container"><div class="ad-label">Ad Slot</div>Provider-approved async ad can go here.</div>
+<div class="section-grid">
+  <div class="panel"><div class="url-display"><span class="label">Audited URL</span><span class="url" id="auditedUrl">No audit run yet</span><span class="status offline" id="siteStatus">Idle</span></div><div class="table-wrap"><table><thead><tr><th>Check</th><th>Status</th><th>Details</th></tr></thead><tbody id="results"><tr><td colspan="3" class="muted">Enter a URL and run audit.</td></tr></tbody></table></div></div>
+  <div class="panel"><h2 style="margin:0 0 10px">Deep Findings</h2><div class="list" id="findings"><div class="item"><h3>Ready</h3><p>Audit run karne par findings yahan aayengi.</p></div></div></div>
+</div>
+<div class="section-grid">
+  <div class="panel"><h2 style="margin:0 0 10px">Meta & Technical</h2><div class="two"><div class="item"><h3>Metadata</h3><p id="metaBox" class="muted">No data yet.</p></div><div class="item"><h3>Technical</h3><p id="techBox" class="muted">No data yet.</p></div></div></div>
+  <div class="panel"><h2 style="margin:0 0 10px">Fix Plan</h2><div class="list" id="actions"><div class="item"><h3>Run audit to generate fixes</h3><p>Priority-based fixes yahan aayengi.</p></div></div></div>
+</div>
+<footer><div class="footer-links"><a href="#">SEO Audit</a><a href="#">Security Check</a><a href="#">PWA Ready</a><a href="#">Cloudflare Pages</a></div><p>Built as a premium single-page website checker for modern SEO workflows.</p></footer>
+</div>
 
-    <section class="hero">
-      <div class="hero-badge"><span>●</span> Premium URL Audit Suite</div>
-      <h1><span class="crown-icon">👑</span> <span class="highlight">Dynamic SEO-friendly</span> website audit.</h1>
-      <p>Google-style title and meta checks, structured data validation, accessibility checks, security signals, keyword sync, and technical fixes — all in one premium dashboard. Google recommends concise, unique titles and quality meta descriptions, and structured data helps search engines understand content better. [web:11][web:3][web:23]</p>
+<script>
+const state={report:null,deferredPrompt:null};
+const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+const n=v=>Number.isFinite(v)?Math.round(v):0;
+const KEYWORDS_TOP_100=["website checker","seo audit","url analyzer","page speed","core web vitals","meta tags","title tag","meta description","canonical url","robots txt","sitemap xml","open graph","twitter card","structured data","json ld","accessibility audit","alt text","heading structure","broken links","redirect checker","security headers","mixed content","mobile friendly","pwa manifest","service worker","performance score","lighthouse","indexability","crawlability","render blocking","javascript errors","css audit","image optimization","lazy load","server response","status code","http headers","cache control","content quality","keyword density","duplicate content","thin content","internal links","external links","orphan pages","schema markup","hreflang","multilingual seo","snippet preview","serp preview","click through rate","readability","compliance check","privacy policy","terms page","contact page","404 page","404 checker","ssl checker","dns check","domain health","hosting check","cdn check","compression","gzip","brotli","font loading","font optimization","layout shift","largest contentful paint","first input delay","interaction to next paint","visual stability","crawl depth","site architecture","content freshness","image alt checker","form labels","aria labels","contrast ratio","keyboard navigation","focus order","duplicate titles","duplicate descriptions","page depth","internal anchor text","nofollow audit","sponsored links","ugc links","mobile viewport","viewport tag","touch targets","tap targets","ad layout","page speed insights","search console","url inspection","technical seo","off page seo","on page seo","local seo","ecommerce seo","blog seo","news seo","audit report"];
 
-      <div class="search-box">
-        <input id="url" type="url" placeholder="https://example.com" value="https://example.com" />
-        <button onclick="runAudit()">Run Full Audit</button>
-      </div>
-    </section>
-
-    <div class="stats-row">
-      <div class="stat-card"><div class="number" id="overall">0</div><div class="label">Overall</div></div>
-      <div class="stat-card"><div class="number" id="seoScore">0</div><div class="label">SEO</div></div>
-      <div class="stat-card"><div class="number" id="perfScore">0</div><div class="label">Performance</div></div>
-      <div class="stat-card"><div class="number" id="a11yScore">0</div><div class="label">Accessibility</div></div>
-      <div class="stat-card"><div class="number" id="secScore">0</div><div class="label">Security</div></div>
-    </div>
-
-    <div class="pwa-banner" id="pwaBanner">
-      <div class="message"><div class="icon">📱</div><div>Install this tool as a PWA for faster access and a native feel.</div></div>
-      <button class="btn-install" onclick="installPWA()">Install</button>
-    </div>
-
-    <div class="ad-container"><div class="ad-label">Ad Slot</div>Provider-approved async ad can go here.</div>
-
-    <div class="section-grid">
-      <div class="panel">
-        <div class="url-display">
-          <span class="label">Audited URL</span>
-          <span class="url" id="auditedUrl">No audit run yet</span>
-          <span class="status offline" id="siteStatus">Idle</span>
-        </div>
-
-        <div class="table-wrap">
-          <table>
-            <thead><tr><th>Check</th><th>Status</th><th>Details</th></tr></thead>
-            <tbody id="results"><tr><td colspan="3" class="muted">Enter a URL and run audit.</td></tr></tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="panel">
-        <h2 style="margin:0 0 10px">Deep Findings</h2>
-        <div class="list" id="findings"><div class="item"><h3>Ready</h3><p>Audit run karne par findings yahan aayengi.</p></div></div>
-      </div>
-    </div>
-
-    <div class="section-grid">
-      <div class="panel">
-        <h2 style="margin:0 0 10px">Meta & Technical</h2>
-        <div class="two">
-          <div class="item"><h3>Metadata</h3><p id="metaBox" class="muted">No data yet.</p></div>
-          <div class="item"><h3>Technical</h3><p id="techBox" class="muted">No data yet.</p></div>
-        </div>
-      </div>
-      <div class="panel">
-        <h2 style="margin:0 0 10px">Fix Plan</h2>
-        <div class="list" id="actions"><div class="item"><h3>Run audit to generate fixes</h3><p>Priority-based fixes yahan aayengi.</p></div></div>
-      </div>
-    </div>
-
-    <footer>
-      <div class="footer-links">
-        <a href="#">SEO Audit</a>
-        <a href="#">Security Check</a>
-        <a href="#">PWA Ready</a>
-        <a href="#">Cloudflare Pages</a>
-      </div>
-      <p>Built as a premium single-page website checker for modern SEO workflows.</p>
-    </footer>
-  </div>
-
-  <script>
-    const state = { report: null, deferredPrompt: null };
-    const esc = s => String(s ?? '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-    const n = v => Number.isFinite(v) ? Math.round(v) : 0;
-    const KEYWORDS_TOP_100 = ["website checker","seo audit","url analyzer","page speed","core web vitals","meta tags","title tag","meta description","canonical url","robots txt","sitemap xml","open graph","twitter card","structured data","json ld","accessibility audit","alt text","heading structure","broken links","redirect checker","security headers","mixed content","mobile friendly","pwa manifest","service worker","performance score","lighthouse","indexability","crawlability","render blocking","javascript errors","css audit","image optimization","lazy load","server response","status code","http headers","cache control","content quality","keyword density","duplicate content","thin content","internal links","external links","orphan pages","schema markup","hreflang","multilingual seo","snippet preview","serp preview","click through rate","readability","compliance check","privacy policy","terms page","contact page","404 page","404 checker","ssl checker","dns check","domain health","hosting check","cdn check","compression","gzip","brotli","font loading","font optimization","layout shift","largest contentful paint","first input delay","interaction to next paint","visual stability","crawl depth","site architecture","content freshness","image alt checker","form labels","aria labels","contrast ratio","keyboard navigation","focus order","duplicate titles","duplicate descriptions","page depth","internal anchor text","nofollow audit","sponsored links","ugc links","mobile viewport","viewport tag","touch targets","tap targets","ad layout","page speed insights","search console","url inspection","technical seo","off page seo","on page seo","local seo","ecommerce seo","blog seo","news seo","audit report"];
-
-    async function fetchPage(url){
-      const c = new AbortController();
-      const t = setTimeout(() => c.abort(), 12000);
-      try{
-        const r = await fetch(url, { mode:'cors', cache:'no-store', signal:c.signal });
-        const html = await r.text();
-        return { ok:r.ok, status:r.status, html, finalUrl:r.url, headers:[...r.headers.entries()] };
-      }catch(e){
-        return { ok:false, status:0, html:'', finalUrl:url, error:e.message, headers:[] };
-      }finally{ clearTimeout(t); }
-    }
-
-    const docFrom = html => new DOMParser().parseFromString(html || '<!doctype html><html><head></head><body></body></html>', 'text/html');
-    const text = el => (el?.textContent || '').trim();
-
-    function autoFixTitle(title){
-      const base = title.replace(/s*[-|]s*.*$/, '').trim();
-      return base.length <= 58 ? base : base.slice(0,55).trim() + '...';
-    }
-
-    function analyze(url, res){
-      const doc = docFrom(res.html);
-      const title = text(doc.querySelector('title'));
-      const description = doc.querySelector('meta[name="description"]')?.content || '';
-      const canonical = doc.querySelector('link[rel="canonical"]')?.href || '';
-      const robots = doc.querySelector('meta[name="robots"]')?.content || '';
-      const viewport = doc.querySelector('meta[name="viewport"]')?.content || '';
-      const lang = doc.documentElement.lang || '';
-      const h1 = [...doc.querySelectorAll('h1')].map(text).filter(Boolean);
-      const h2 = [...doc.querySelectorAll('h2')].map(text).filter(Boolean);
-      const images = [...doc.images];
-      const links = [...doc.querySelectorAll('a')];
-      const scripts = [...doc.querySelectorAll('script')];
-      const schema = [...doc.querySelectorAll('script[type="application/ld+json"]')];
-      const forms = [...doc.querySelectorAll('form')];
-      const inputs = [...doc.querySelectorAll('input,textarea,select')];
-      const buttons = [...doc.querySelectorAll('button')];
-      const og = doc.querySelector('meta[property="og:title"]')?.content || '';
-      const twitter = doc.querySelector('meta[name="twitter:card"]')?.content || '';
-      const favicon = !!doc.querySelector('link[rel="icon"],link[rel="shortcut icon"]');
-
-      const issues = [];
-      const actions = [];
-
-      if(!title) issues.push({cat:'SEO', sev:'bad', msg:'Title missing', fix:'Add a unique title tag.'});
-      else if(title.length > 60) issues.push({cat:'SEO', sev:'warn', msg:'Title too long', fix:`Auto fix title: ${autoFixTitle(title)}`});
-
-      if(!description) issues.push({cat:'SEO', sev:'bad', msg:'Meta description missing', fix:'Add a unique meta description.'});
-      else if(description.length < 70) issues.push({cat:'SEO', sev:'warn', msg:'Description too short', fix:'Expand description to improve snippet quality.'});
-
-      if(!canonical) issues.push({cat:'SEO', sev:'warn', msg:'Canonical missing', fix:`Set canonical to ${url}`});
-      if(h1.length === 0) issues.push({cat:'SEO', sev:'bad', msg:'No H1 found', fix:'Add one main H1.'});
-      if(h1.length > 1) issues.push({cat:'SEO', sev:'warn', msg:'Multiple H1s found', fix:'Keep one H1, others as H2/H3.'});
-      if(!viewport) issues.push({cat:'A11Y', sev:'bad', msg:'Viewport missing', fix:'Add responsive viewport meta tag.'});
-      if(!lang) issues.push({cat:'A11Y', sev:'warn', msg:'html lang missing', fix:'Set <html lang="en"> or correct language.'});
-      if(images.some(i => !i.alt)) issues.push({cat:'A11Y', sev:'warn', msg:'Some images missing alt', fix:'Add meaningful alt text.'});
-      if(buttons.some(b => !text(b) && !b.getAttribute('aria-label'))) issues.push({cat:'A11Y', sev:'warn', msg:'Unlabeled buttons', fix:'Add aria-labels or text.'});
-      if(inputs.some(i => !i.labels?.length && !i.getAttribute('aria-label') && !i.getAttribute('placeholder'))) issues.push({cat:'A11Y', sev:'warn', msg:'Unlabeled inputs', fix:'Add labels or aria-labels.'});
-      if(!robots) issues.push({cat:'SEO', sev:'warn', msg:'Robots meta missing', fix:'Set robots index/follow intentionally.'});
-      if(!og) issues.push({cat:'SEO', sev:'warn', msg:'OG metadata incomplete', fix:'Add OG title/description/image.'});
-      if(!twitter) issues.push({cat:'SEO', sev:'warn', msg:'Twitter card missing', fix:'Add Twitter card metadata.'});
-      if(schema.length === 0) issues.push({cat:'SEO', sev:'warn', msg:'Structured data missing', fix:'Add JSON-LD for rich results.'});
-      if(!favicon) issues.push({cat:'UX', sev:'warn', msg:'No favicon detected', fix:'Add favicon and app icons.'});
-      if((res.html.match(/http:///g) || []).length) issues.push({cat:'SEC', sev:'bad', msg:'Mixed content pattern detected', fix:'Use HTTPS assets only.'});
-
-      const externalScripts = scripts.filter(s => s.src).length;
-      const cssFiles = [...doc.querySelectorAll('link[rel="stylesheet"]')].length;
-      const lazyImages = images.filter(i => (i.loading || '').toLowerCase() === 'lazy').length;
-      const keywordScore = Math.min(100, KEYWORDS_TOP_100.filter(k => (title + ' ' + description).toLowerCase().includes(k.split(' ')[0])).length * 5);
-      const seoScore = n(100 - issues.filter(i => i.cat === 'SEO' && i.sev === 'bad').length * 18 - issues.filter(i => i.cat === 'SEO' && i.sev === 'warn').length * 7);
-      const a11yScore = n(100 - issues.filter(i => i.cat === 'A11Y' && i.sev === 'bad').length * 20 - issues.filter(i => i.cat === 'A11Y' && i.sev === 'warn').length * 8);
-      const secScore = n(100 - issues.filter(i => i.cat === 'SEC' && i.sev === 'bad').length * 25 - (url.startsWith('https://') ? 0 : 20));
-      const perfScore = n(100 - externalScripts * 4 - cssFiles * 3 - Math.max(0, images.length - lazyImages) * 2);
-      const uxScore = n(100 - Math.max(0, links.length - 120));
-      const overall = n((seoScore + a11yScore + secScore + perfScore + uxScore + keywordScore) / 6);
-
-      if (seoScore < 80) actions.push(`SEO auto fix: title="${autoFixTitle(title || 'King Website Checker')}"`);
-      if (perfScore < 80) actions.push('Performance fix: heavy assets reduce karo, lazy load aur caching use karo.');
-      if (a11yScore < 80) actions.push('Accessibility fix: alt, labels, contrast, and lang improve karo.');
-      if (secScore < 80) actions.push('Security fix: HTTPS and mixed content verify karo.');
-      if (keywordScore < 60) actions.push('Keyword sync: top intent keywords naturally content mein include karo.');
-      if (!actions.length) actions.push('Site healthy lag rahi hai, phir bhi periodic crawl and monitoring rakho.');
-
-      return { url, finalUrl: res.finalUrl || url, status: res.status, meta:{ title, description, canonical, robots, viewport, lang, og, twitter, favicon }, h1, h2, images, links, scripts, schema, counts:{ forms:forms.length, inputs:inputs.length, buttons:buttons.length, totalImages:images.length, totalLinks:links.length, lazyImages, externalScripts, cssFiles }, scores:{ overall, seoScore, a11yScore, secScore, perfScore, uxScore, keywordScore }, issues, actions, keywords: KEYWORDS_TOP_100 };
-    }
-
-    function render(report){
-      state.report = report;
-      overall.textContent = report.scores.overall;
-      seoScore.textContent = report.scores.seoScore;
-      perfScore.textContent = report.scores.perfScore;
-      a11yScore.textContent = report.scores.a11yScore;
-      secScore.textContent = report.scores.secScore;
-      auditedUrl.textContent = report.finalUrl || report.url;
-      siteStatus.textContent = report.status ? (report.status === 200 ? 'Online' : `HTTP ${report.status}`) : 'Offline';
-      siteStatus.className = 'status ' + (report.status === 200 ? 'online' : 'offline');
-
-      results.innerHTML = [
-        ['Fetch / Response', report.status ? (report.status === 200 ? 'OK' : 'WARN') : 'FAIL', report.status ? `HTTP ${report.status} | ${report.finalUrl}` : 'Could not fetch page in browser context.'],
-        ['Title', report.meta.title ? 'OK' : 'FAIL', report.meta.title || 'Missing title tag.'],
-        ['Meta Description', report.meta.description ? 'OK' : 'FAIL', report.meta.description || 'Missing meta description.'],
-        ['Canonical', report.meta.canonical ? 'OK' : 'WARN', report.meta.canonical || 'Missing canonical URL.'],
-        ['H1 Count', report.h1.length === 1 ? 'OK' : report.h1.length ? 'WARN' : 'FAIL', report.h1.length ? report.h1.join(' | ') : 'No H1 found.'],
-        ['Images', report.counts.totalImages ? 'OK' : 'WARN', `${report.counts.totalImages} images, ${report.counts.lazyImages} lazy-loaded.`],
-        ['Schema', report.schema.length ? 'OK' : 'WARN', `${report.schema.length} JSON-LD blocks.`],
-        ['Viewport', report.meta.viewport ? 'OK' : 'FAIL', report.meta.viewport || 'Missing viewport.'],
-        ['Language', report.meta.lang ? 'OK' : 'WARN', report.meta.lang || 'Missing html lang.'],
-        ['Keyword Sync', report.scores.keywordScore >= 60 ? 'OK' : 'WARN', `Top keyword score ${report.scores.keywordScore}/100.`]
-      ].map(([a,b,c]) => `<tr><td>${esc(a)}</td><td><span class="score ${b === 'OK' ? 'good' : b === 'WARN' ? 'warn' : 'bad'}">${esc(b)}</span></td><td>${esc(c)}</td></tr>`).join('');
-
-      findings.innerHTML = report.issues.length
-        ? report.issues.slice(0,12).map(i => `<div class="item"><h3>${esc(i.cat)} • ${esc(i.msg)}</h3><p>${esc(i.fix)}</p></div>`).join('')
-        : `<div class="item"><h3>No major issues</h3><p>Core checks pass, but deeper crawl can still reveal page-level and link-level problems.</p></div>`;
-
-      actions.innerHTML = report.actions.map(a => `<div class="item"><h3>Fix</h3><p>${esc(a)}</p></div>`).join('');
-      metaBox.innerHTML = `<b>Title:</b> ${esc(report.meta.title || 'Missing')}<br><b>Description:</b> ${esc(report.meta.description || 'Missing')}<br><b>Canonical:</b> ${esc(report.meta.canonical || 'Missing')}<br><b>Robots:</b> ${esc(report.meta.robots || 'Missing')}<br><b>OG:</b> ${esc(report.meta.og || 'Missing')}<br><b>Twitter:</b> ${esc(report.meta.twitter || 'Missing')}`;
-      techBox.innerHTML = `<b>Forms:</b> ${report.counts.forms}<br><b>Inputs:</b> ${report.counts.inputs}<br><b>Buttons:</b> ${report.counts.buttons}<br><b>Images:</b> ${report.counts.totalImages}<br><b>Scripts:</b> ${report.counts.externalScripts} external<br><b>CSS files:</b> ${report.counts.cssFiles}<br><b>Keyword Score:</b> ${report.scores.keywordScore}/100`;
-    }
-
-    async function runAudit(){
-      const url = document.getElementById('url').value.trim();
-      if (!/^https?:///i.test(url)) return alert('Please enter a full URL starting with https://');
-      results.innerHTML = '<tr><td colspan="3" class="muted">Analyzing...</td></tr>';
-      findings.innerHTML = '<div class="item"><h3>Analyzing</h3><p>Page inspect ho rahi hai...</p></div>';
-      const report = analyze(url, await fetchPage(url));
-      render(report);
-    }
-
-    function downloadReport(){
-      if (!state.report) return alert('Run audit first.');
-      const blob = new Blob([JSON.stringify(state.report, null, 2)], { type:'application/json' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = 'king-website-checker-report.json';
-      a.click();
-      URL.revokeObjectURL(a.href);
-    }
-
-    function loadSample(){
-      document.getElementById('url').value = 'https://example.com';
-      runAudit();
-    }
-
-    function installPWA(){
-      if (state.deferredPrompt) {
-        state.deferredPrompt.prompt();
-        state.deferredPrompt.userChoice.finally(() => state.deferredPrompt = null);
-      } else {
-        alert('PWA install prompt not available yet.');
-      }
-    }
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      state.deferredPrompt = e;
-      document.getElementById('pwaBanner').classList.add('active');
-    });
-
-    if ('serviceWorker' in navigator) {
-      const swCode = `const C='kwc-v1';self.addEventListener('install',e=>{e.waitUntil(caches.open(C).then(c=>c.addAll(['./','./index.html','./manifest.webmanifest'])))});
-self.addEventListener('activate',e=>e.waitUntil(self.clients.claim()));
-self.addEventListener('fetch',e=>{e.respondWith(caches.match(e.request).then(r=>r||fetch(e.request).then(x=>{const y=x.clone();caches.open(C).then(c=>c.put(e.request,y));return x}).catch(()=>r)))})`;
-      const blob = new Blob([swCode], {type:'text/javascript'});
-      navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(()=>{});
-    }
-
-    document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
-      document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
-      t.classList.add('active');
-    }));
-
-    window.runAudit = runAudit;
-    window.loadSample = loadSample;
-    window.downloadReport = downloadReport;
-    window.installPWA = installPWA;
-  </script>
+async function fetchPage(url){
+  const c=new AbortController();
+  const t=setTimeout(()=>c.abort(),12000);
+  try{
+    const r=await fetch(url,{mode:'cors',cache:'no-store',signal:c.signal});
+    const html=await r.text();
+    return{ok:r.ok,status:r.status,html,finalUrl:r.url,headers:[...r.headers.entries()]};
+  }catch(e){
+    return{ok:false,status:0,html:'',finalUrl:url,error:e.message,headers:[]};
+  }finally{clearTimeout(t);}
+}
+const docFrom=html=>new DOMParser().parseFromString(html||'<!doctype html><html><head></head><body></body></html>','text/html');
+const text=el=>(el?.textContent||'').trim();
+function autoFixTitle(title){const base=title.replace(/s*[-|]s*.*$/,'').trim();return base.length<=58?base:base.slice(0,55).trim()+'...'}
+function analyze(url,res){
+  const doc=docFrom(res.html);
+  const title=text(doc.querySelector('title'));
+  const description=doc.querySelector('meta[name="description"]')?.content||'';
+  const canonical=doc.querySelector('link[rel="canonical"]')?.href||'';
+  const robots=doc.querySelector('meta[name="robots"]')?.content||'';
+  const viewport=doc.querySelector('meta[name="viewport"]')?.content||'';
+  const lang=doc.documentElement.lang||'';
+  const h1=[...doc.querySelectorAll('h1')].map(text).filter(Boolean);
+  const h2=[...doc.querySelectorAll('h2')].map(text).filter(Boolean);
+  const images=[...doc.images];
+  const links=[...doc.querySelectorAll('a')];
+  const scripts=[...doc.querySelectorAll('script')];
+  const schema=[...doc.querySelectorAll('script[type="application/ld+json"]')];
+  const forms=[...doc.querySelectorAll('form')];
+  const inputs=[...doc.querySelectorAll('input,textarea,select')];
+  const buttons=[...doc.querySelectorAll('button')];
+  const ogTitle=doc.querySelector('meta[property="og:title"]')?.content||'';
+  const ogDesc=doc.querySelector('meta[property="og:description"]')?.content||'';
+  const ogImage=doc.querySelector('meta[property="og:image"]')?.content||'';
+  const twitter=doc.querySelector('meta[name="twitter:card"]')?.content||'';
+  const favicon=!!doc.querySelector('link[rel="icon"],link[rel="shortcut icon"]');
+  const issues=[]; const actions=[];
+  if(!title) issues.push({cat:'SEO',sev:'bad',msg:'Title missing',fix:'Add a unique title tag.'});
+  else if(title.length>60) issues.push({cat:'SEO',sev:'warn',msg:'Title too long',fix:`Auto fix title: ${autoFixTitle(title)}`});
+  if(!description) issues.push({cat:'SEO',sev:'bad',msg:'Meta description missing',fix:'Add a unique meta description.'});
+  else if(description.length<70) issues.push({cat:'SEO',sev:'warn',msg:'Description too short',fix:'Expand description to improve snippet quality.'});
+  if(!canonical) issues.push({cat:'SEO',sev:'warn',msg:'Canonical missing',fix:`Set canonical to ${url}`});
+  if(h1.length===0) issues.push({cat:'SEO',sev:'bad',msg:'No H1 found',fix:'Add one main H1.'});
+  if(h1.length>1) issues.push({cat:'SEO',sev:'warn',msg:'Multiple H1s found',fix:'Keep one H1, others as H2/H3.'});
+  if(!viewport) issues.push({cat:'A11Y',sev:'bad',msg:'Viewport missing',fix:'Add responsive viewport meta tag.'});
+  if(!lang) issues.push({cat:'A11Y',sev:'warn',msg:'html lang missing',fix:'Set <html lang="en"> or correct language.'});
+  if(images.some(i=>!i.alt)) issues.push({cat:'A11Y',sev:'warn',msg:'Some images missing alt',fix:'Add meaningful alt text.'});
+  if(buttons.some(b=>!text(b)&&!b.getAttribute('aria-label'))) issues.push({cat:'A11Y',sev:'warn',msg:'Unlabeled buttons',fix:'Add aria-labels or text.'});
+  if(inputs.some(i=>!i.labels?.length&&!i.getAttribute('aria-label')&&!i.getAttribute('placeholder'))) issues.push({cat:'A11Y',sev:'warn',msg:'Unlabeled inputs',fix:'Add labels or aria-labels.'});
+  if(!robots) issues.push({cat:'SEO',sev:'warn',msg:'Robots meta missing',fix:'Set robots index/follow intentionally.'});
+  if(!ogTitle||!ogDesc||!ogImage) issues.push({cat:'SEO',sev:'warn',msg:'OG metadata incomplete',fix:'Add complete Open Graph metadata.'});
+  if(!twitter) issues.push({cat:'SEO',sev:'warn',msg:'Twitter card missing',fix:'Add Twitter card metadata.'});
+  if(schema.length===0) issues.push({cat:'SEO',sev:'warn',msg:'Structured data missing',fix:'Add JSON-LD for rich results.'});
+  if(!favicon) issues.push({cat:'UX',sev:'warn',msg:'No favicon detected',fix:'Add favicon and app icons.'});
+  if((res.html.match(/http:///g)||[]).length) issues.push({cat:'SEC',sev:'bad',msg:'Mixed content pattern detected',fix:'Use HTTPS assets only.'});
+  const externalScripts=scripts.filter(s=>s.src).length;
+  const cssFiles=[...doc.querySelectorAll('link[rel="stylesheet"]')].length;
+  const lazyImages=images.filter(i=>(i.loading||'').toLowerCase()==='lazy').length;
+  const keywordScore=Math.min(100,KEYWORDS_TOP_100.filter(k=>(title+' '+description).toLowerCase().includes(k.split(' ')[0])).length*5);
+  const seoScore=n(100-issues.filter(i=>i.cat==='SEO'&&i.sev==='bad').length*18-issues.filter(i=>i.cat==='SEO'&&i.sev==='warn').length*7);
+  const a11yScore=n(100-issues.filter(i=>i.cat==='A11Y'&&i.sev==='bad').length*20-issues.filter(i=>i.cat==='A11Y'&&i.sev==='warn').length*8);
+  const secScore=n(100-issues.filter(i=>i.cat==='SEC'&&i.sev==='bad').length*25-(url.startsWith('https://')?0:20));
+  const perfScore=n(100-externalScripts*4-cssFiles*3-Math.max(0,images.length-lazyImages)*2);
+  const uxScore=n(100-Math.max(0,links.length-120));
+  const overall=n((seoScore+a11yScore+secScore+perfScore+uxScore+keywordScore)/6);
+  if(seoScore<80) actions.push(`SEO auto fix: title="${autoFixTitle(title||'King Website Checker')}"`);
+  if(perfScore<80) actions.push('Performance fix: heavy assets reduce karo, lazy load aur caching use karo.');
+  if(a11yScore<80) actions.push('Accessibility fix: alt, labels, contrast, and lang improve karo.');
+  if(secScore<80) actions.push('Security fix: HTTPS and mixed content verify karo.');
+  if(keywordScore<60) actions.push('Keyword sync: top intent keywords naturally content mein include karo.');
+  if(!actions.length) actions.push('Site healthy lag rahi hai, phir bhi periodic crawl and monitoring rakho.');
+  return{url,finalUrl:res.finalUrl||url,status:res.status,meta:{title,description,canonical,robots,viewport,lang,ogTitle,ogDesc,ogImage,twitter,favicon},h1,h2,images,links,scripts,schema,counts:{forms:forms.length,inputs:inputs.length,buttons:buttons.length,totalImages:images.length,totalLinks:links.length,lazyImages,externalScripts,cssFiles},scores:{overall,seoScore,a11yScore,secScore,perfScore,uxScore,keywordScore},issues,actions,keywords:KEYWORDS_TOP_100};
+}
+function render(report){
+  state.report=report;
+  overall.textContent=report.scores.overall;seoScore.textContent=report.scores.seoScore;perfScore.textContent=report.scores.perfScore;a11yScore.textContent=report.scores.a11yScore;secScore.textContent=report.scores.secScore;
+  auditedUrl.textContent=report.finalUrl||report.url;siteStatus.textContent=report.status?(report.status===200?'Online':`HTTP ${report.status}`):'Offline';siteStatus.className='status '+(report.status===200?'online':'offline');
+  results.innerHTML=[
+    ['Fetch / Response',report.status?(report.status===200?'OK':'WARN'):'FAIL',report.status?`HTTP ${report.status} | ${report.finalUrl}`:'Could not fetch page in browser context.'],
+    ['Title',report.meta.title?'OK':'FAIL',report.meta.title||'Missing title tag.'],
+    ['Meta Description',report.meta.description?'OK':'FAIL',report.meta.description||'Missing meta description.'],
+    ['Canonical',report.meta.canonical?'OK':'WARN',report.meta.canonical||'Missing canonical URL.'],
+    ['H1 Count',report.h1.length===1?'OK':report.h1.length?'WARN':'FAIL',report.h1.length?report.h1.join(' | '):'No H1 found.'],
+    ['Images',report.counts.totalImages?'OK':'WARN',`${report.counts.totalImages} images, ${report.counts.lazyImages} lazy-loaded.`],
+    ['Schema',report.schema.length?'OK':'WARN',`${report.schema.length} JSON-LD blocks.`],
+    ['Viewport',report.meta.viewport?'OK':'FAIL',report.meta.viewport||'Missing viewport.'],
+    ['Language',report.meta.lang?'OK':'WARN',report.meta.lang||'Missing html lang.'],
+    ['Keyword Sync',report.scores.keywordScore>=60?'OK':'WARN',`Top keyword score ${report.scores.keywordScore}/100.`],
+    ['Open Graph',report.meta.ogTitle&&report.meta.ogDesc&&report.meta.ogImage?'OK':'WARN',`${report.meta.ogTitle?'title ':''}${report.meta.ogDesc?'desc ':''}${report.meta.ogImage?'image':''}`.trim()||'Missing OG metadata.'],
+    ['Twitter Card',report.meta.twitter?'OK':'WARN',report.meta.twitter||'Missing Twitter card.']
+  ].map(([a,b,c])=>`<tr><td>${esc(a)}</td><td><span class="score ${b==='OK'?'good':b==='WARN'?'warn':'bad'}">${esc(b)}</span></td><td>${esc(c)}</td></tr>`).join('');
+  findings.innerHTML=report.issues.length?report.issues.slice(0,12).map(i=>`<div class="item"><h3>${esc(i.cat)} • ${esc(i.msg)}</h3><p>${esc(i.fix)}</p></div>`).join(''):`<div class="item"><h3>No major issues</h3><p>Core checks pass, but deeper crawl can still reveal page-level and link-level problems.</p></div>`;
+  actions.innerHTML=report.actions.map(a=>`<div class="item"><h3>Fix</h3><p>${esc(a)}</p></div>`).join('');
+  metaBox.innerHTML=`<b>Title:</b> ${esc(report.meta.title || 'Missing')}<br><b>Description:</b> ${esc(report.meta.description || 'Missing')}<br><b>Canonical:</b> ${esc(report.meta.canonical || 'Missing')}<br><b>Robots:</b> ${esc(report.meta.robots || 'Missing')}<br><b>OG Title:</b> ${esc(report.meta.ogTitle || 'Missing')}<br><b>OG Desc:</b> ${esc(report.meta.ogDesc || 'Missing')}<br><b>OG Image:</b> ${esc(report.meta.ogImage || 'Missing')}<br><b>Twitter:</b> ${esc(report.meta.twitter || 'Missing')}`;
+  techBox.innerHTML=`<b>Forms:</b> ${report.counts.forms}<br><b>Inputs:</b> ${report.counts.inputs}<br><b>Buttons:</b> ${report.counts.buttons}<br><b>Images:</b> ${report.counts.totalImages}<br><b>Links:</b> ${report.counts.totalLinks}<br><b>Scripts:</b> ${report.counts.externalScripts} external<br><b>CSS files:</b> ${report.counts.cssFiles}<br><b>Lazy Images:</b> ${report.counts.lazyImages}<br><b>Keyword Score:</b> ${report.scores.keywordScore}/100`;
+}
+async function runAudit(){
+  const url=document.getElementById('url').value.trim();
+  if(!/^https?:///i.test(url)) return alert('Please enter a full URL starting with https://');
+  results.innerHTML='<tr><td colspan="3" class="muted">Analyzing...</td></tr>';
+  findings.innerHTML='<div class="item"><h3>Analyzing</h3><p>Page inspect ho rahi hai...</p></div>';
+  render(analyze(url, await fetchPage(url)));
+}
+function downloadReport(){
+  if(!state.report) return alert('Run audit first.');
+  const blob=new Blob([JSON.stringify(state.report,null,2)],{type:'application/json'});
+  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='king-website-checker-report.json';a.click();URL.revokeObjectURL(a.href);
+}
+function loadSample(){document.getElementById('url').value='https://example.com';runAudit()}
+function installPWA(){if(state.deferredPrompt){state.deferredPrompt.prompt();state.deferredPrompt.userChoice.finally(()=>state.deferredPrompt=null)}else alert('PWA install prompt not available yet.')}
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();state.deferredPrompt=e;document.getElementById('pwaBanner').classList.add('active')});
+window.runAudit=runAudit;window.loadSample=loadSample;window.downloadReport=downloadReport;window.installPWA=installPWA;
+</script>
 </body>
 </html>
